@@ -17,6 +17,7 @@ public class TerrainControls : MonoBehaviour
     public Transform target;
     public float heightMultiplier = 10;
     public float noiseTiling = 10;
+    public float speed = .5f;
 
     // Start is called before the first frame update
     void Start()
