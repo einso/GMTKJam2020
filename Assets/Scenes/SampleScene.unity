@@ -595,3 +595,9 @@ MonoBehaviour:
   target: {fileID: 551466451}
   heightMultiplier: 1
   noiseTiling: 10
+  speed: 0.5
+  freq: 1
+  amp: 1
+  pers: 1
+  oct: 1
+  seed: 1
