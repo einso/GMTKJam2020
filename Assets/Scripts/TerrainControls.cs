@@ -62,7 +62,7 @@ public class TerrainControls : MonoBehaviour
                 //y *= noiseTiling;
                 //x += Time.time * speed;
 
-                float z = 
+                float z = Time.time * speed;
                 //x += Time.time * speed;
 
                 
@@ -80,6 +80,9 @@ public class TerrainControls : MonoBehaviour
         // set the new height
         terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
     }
+
+    public float freq, amp, pers;
+    public int oct, seed;
 
 
     public static float Noise3D(float x, float y, float z, float frequency, float amplitude, float persistence, int octave, int seed)
