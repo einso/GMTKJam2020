@@ -17,7 +17,9 @@ public class TerrainControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        terr = Terrain.activeTerrain;
+        hmWidth = terr.terrainData.heightmapWidth;
+        hmHeight = terr.terrainData.heightmapHeight;
     }
 
     // Update is called once per frame
