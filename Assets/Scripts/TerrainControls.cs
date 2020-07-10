@@ -8,8 +8,8 @@ public class TerrainControls : MonoBehaviour
     int hmWidth; // heightmap width
     int hmHeight; // heightmap height
 
-    int posXInTerrain; // position of the game object in terrain width (x axis)
-    int posYInTerrain; // position of the game object in terrain height (z axis)
+    public int posXInTerrain; // position of the game object in terrain width (x axis)
+    public int posYInTerrain; // position of the game object in terrain height (z axis)
 
     int size = 50; // the diameter of terrain portion that will raise under the game object
     float desiredHeight = 0; // the height we want that portion of terrain to be
@@ -18,8 +18,8 @@ public class TerrainControls : MonoBehaviour
     void Start()
     {
         terr = Terrain.activeTerrain;
-        hmWidth = terr.terrainData.heightmapWidth;
-        hmHeight = terr.terrainData.heightmapHeight;
+        hmWidth = terr.terrainData.heightmapResolution;
+        hmHeight = terr.terrainData.heightmapResolution;
     }
 
     // Update is called once per frame
