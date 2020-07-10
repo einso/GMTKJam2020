@@ -576,3 +576,4 @@ MonoBehaviour:
   posYInTerrain: 10
   size: 257
   target: {fileID: 551466451}
+  heightMultiplier: 1
