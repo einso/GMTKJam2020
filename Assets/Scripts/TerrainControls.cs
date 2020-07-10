@@ -46,8 +46,8 @@ public class TerrainControls : MonoBehaviour
 
         // get the heights of the terrain under this game object
         //print("x " + posXInTerrain + " y " + posYInTerrain + " offset " + offset + " size " + size);
-        //float[,] heights = terr.terrainData.GetHeights(posXInTerrain - offset, posYInTerrain - offset, size, size);
-        float[,] heights = new float[10,10];
+        float[,] heights = terr.terrainData.GetHeights(posXInTerrain - offset, posYInTerrain - offset, size, size);
+        //float[,] heights = new float[10,10];
 
         // we set each sample of the terrain in the size to the desired height
         for (int i = 0; i < size; i++)
@@ -79,7 +79,7 @@ public class TerrainControls : MonoBehaviour
         //print(desiredHeight);
 
         // set the new height
-        //terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
+        terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
     }
 
     public float freq, amp, pers;
