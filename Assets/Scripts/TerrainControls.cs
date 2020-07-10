@@ -40,6 +40,7 @@ public class TerrainControls : MonoBehaviour
         int offset = size / 2;
 
         // get the heights of the terrain under this game object
+        print("x " + posXInTerrain + " y " + posYInTerrain + " offset " + offset + " size " + size);
         float[,] heights = terr.terrainData.GetHeights(posXInTerrain - offset, posYInTerrain - offset, size, size);
 
         // we set each sample of the terrain in the size to the desired height
@@ -48,6 +49,7 @@ public class TerrainControls : MonoBehaviour
             for (int j = 0; j < size; j++)
             {
                 heights[i, j] = desiredHeight;
+                
             }
         }
 
