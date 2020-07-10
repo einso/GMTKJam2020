@@ -572,6 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b487a0b6abfc3994e88fbe12957e1343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posXInTerrain: 38
-  posYInTerrain: 56
+  posXInTerrain: 10
+  posYInTerrain: 10
   size: 10
