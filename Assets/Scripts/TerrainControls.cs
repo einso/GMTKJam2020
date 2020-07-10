@@ -16,6 +16,7 @@ public class TerrainControls : MonoBehaviour
 
     public Transform target;
     public float heightMultiplier = 10;
+    public float noiseTiling = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class TerrainControls : MonoBehaviour
         {
             for (int j = 0; j < size; j++)
             {
-                desiredHeight = Mathf.PerlinNoise((float)i/(float)size, (float)j/(float)size) * heightMultiplier;
+                desiredHeight = Mathf.PerlinNoise(((float)i/(float)size) * noiseTiling, ((float)j/(float)size) * noiseTiling) * heightMultiplier;
                 heights[i, j] = desiredHeight;
                 //print(desiredHeight);
                 
