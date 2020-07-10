@@ -574,5 +574,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posXInTerrain: 10
   posYInTerrain: 10
-  size: 10
+  size: 200
   target: {fileID: 551466451}
