@@ -52,6 +52,7 @@ public class TerrainControls : MonoBehaviour
             {
                 desiredHeight = Mathf.PerlinNoise(i/size, j/size);
                 heights[i, j] = desiredHeight;
+                print(desiredHeight);
                 
             }
         }
