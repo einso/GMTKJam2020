@@ -52,7 +52,7 @@ public class TerrainControls : MonoBehaviour
         {
             for (int j = 0; j < size; j++)
             {
-                desiredHeight = Mathf.PerlinNoise(((float)i/(float)size) * noiseTiling, ((float)j/(float)size) * noiseTiling) * heightMultiplier;
+                desiredHeight = Mathf.PerlinNoise(((float)i/(float)size) * noiseTiling + Time.time, ((float)j/(float)size) * noiseTiling + Time.time) * heightMultiplier;
                 heights[i, j] = desiredHeight;
                 //print(desiredHeight);
                 
