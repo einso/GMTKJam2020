@@ -596,7 +596,7 @@ MonoBehaviour:
   heightMultiplier: 1
   noiseTiling: 10
   speed: 0.5
-  freq: 1
+  freq: 10
   amp: 1
   pers: 1
   oct: 1
