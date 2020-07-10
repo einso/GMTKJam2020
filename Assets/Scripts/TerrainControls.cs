@@ -45,7 +45,7 @@ public class TerrainControls : MonoBehaviour
         int offset = size / 2;
 
         // get the heights of the terrain under this game object
-        print("x " + posXInTerrain + " y " + posYInTerrain + " offset " + offset + " size " + size);
+        //print("x " + posXInTerrain + " y " + posYInTerrain + " offset " + offset + " size " + size);
         float[,] heights = terr.terrainData.GetHeights(posXInTerrain - offset, posYInTerrain - offset, size, size);
 
         // we set each sample of the terrain in the size to the desired height
@@ -75,7 +75,7 @@ public class TerrainControls : MonoBehaviour
 
         // go raising the terrain slowly
         //desiredHeight += Time.deltaTime;
-        print(desiredHeight);
+        //print(desiredHeight);
 
         // set the new height
         terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
