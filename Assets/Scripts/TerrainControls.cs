@@ -52,13 +52,14 @@ public class TerrainControls : MonoBehaviour
             {
                 desiredHeight = Mathf.PerlinNoise(i/size, j/size);
                 heights[i, j] = desiredHeight;
-                print(desiredHeight);
+                //print(desiredHeight);
                 
             }
         }
 
         // go raising the terrain slowly
         //desiredHeight += Time.deltaTime;
+        print(desiredHeight);
 
         // set the new height
         terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
