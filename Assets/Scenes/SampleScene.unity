@@ -575,3 +575,4 @@ MonoBehaviour:
   posXInTerrain: 10
   posYInTerrain: 10
   size: 10
+  target: {fileID: 551466451}

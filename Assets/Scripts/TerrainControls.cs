@@ -14,6 +14,8 @@ public class TerrainControls : MonoBehaviour
     public int size = 50; // the diameter of terrain portion that will raise under the game object
     float desiredHeight = 0; // the height we want that portion of terrain to be
 
+    public Transform target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class TerrainControls : MonoBehaviour
     void Update()
     {
         // get the normalized position of this game object relative to the terrain
-        Vector3 tempCoord = (transform.position - terr.gameObject.transform.position);
+        Vector3 tempCoord = (target.position - terr.gameObject.transform.position);
         Vector3 coord;
         coord.x = tempCoord.x / terr.terrainData.size.x;
         coord.y = tempCoord.y / terr.terrainData.size.y;
