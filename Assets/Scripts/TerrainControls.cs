@@ -18,7 +18,7 @@ public class TerrainControls : MonoBehaviour
     public float heightMultiplier = 10;
     public float noiseTiling = 10;
     public float speed = .5f;
-    public int refreshRate = .1f;
+    public float refreshRate = .1f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class TerrainControls : MonoBehaviour
         hmWidth = terr.terrainData.heightmapResolution;
         hmHeight = terr.terrainData.heightmapResolution;
 
-        InvokeRepeating("TerrainUpdate", .1f, .1f);
+        InvokeRepeating("TerrainUpdate", .1f, refreshRate);
     }
 
     // Update is called once per frame

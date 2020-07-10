@@ -596,6 +596,7 @@ MonoBehaviour:
   heightMultiplier: 1
   noiseTiling: 10
   speed: 0.1
+  refreshRate: 0.05
   freq: 5
   amp: 1
   pers: 1
