@@ -53,8 +53,18 @@ public class TerrainControls : MonoBehaviour
         {
             for (int j = 0; j < size; j++)
             {
-                desiredHeight = Mathf.PerlinNoise(((float)i / (float)size) * noiseTiling + Time.time * speed, ((float)j / (float)size) * noiseTiling + Time.time * speed) * heightMultiplier;
+                //desiredHeight = Mathf.PerlinNoise(((float)i / (float)size) * noiseTiling + Time.time * speed, ((float)j / (float)size) * noiseTiling + Time.time * speed) * heightMultiplier;
+                float x = (float) i / (float) size;
+                x *= noiseTiling;
+                //x += Time.time * speed;
+
+                float y = (float) j / (float) size;
+                y *= noiseTiling;
+                //x += Time.time * speed;
+
+                
                 heights[i, j] = desiredHeight;
+
                 //print(desiredHeight);
 
             }
@@ -67,4 +77,32 @@ public class TerrainControls : MonoBehaviour
         // set the new height
         terr.terrainData.SetHeights(posXInTerrain - offset, posYInTerrain - offset, heights);
     }
+
+
+    public static float Noise3D(float x, float y, float z, float frequency, float amplitude, float persistence, int octave, int seed)
+	{
+		float noise = 0.0f;
+
+		for (int i = 0; i < octave; ++i)
+		{
+			// Get all permutations of noise for each individual axis
+			float noiseXY = Mathf.PerlinNoise(x * frequency + seed, y * frequency + seed) * amplitude;
+			float noiseXZ = Mathf.PerlinNoise(x * frequency + seed, z * frequency + seed) * amplitude;
+			float noiseYZ = Mathf.PerlinNoise(y * frequency + seed, z * frequency + seed) * amplitude;
+
+			// Reverse of the permutations of noise for each individual axis
+			float noiseYX = Mathf.PerlinNoise(y * frequency + seed, x * frequency + seed) * amplitude;
+			float noiseZX = Mathf.PerlinNoise(z * frequency + seed, x * frequency + seed) * amplitude;
+			float noiseZY = Mathf.PerlinNoise(z * frequency + seed, y * frequency + seed) * amplitude;
+
+			// Use the average of the noise functions
+			noise += (noiseXY + noiseXZ + noiseYZ + noiseYX + noiseZX + noiseZY) / 6.0f;
+
+			amplitude *= persistence;
+			frequency *= 2.0f;
+		}
+
+		// Use the average of all octaves
+		return noise / octave;
+	}
 }
