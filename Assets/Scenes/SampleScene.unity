@@ -595,7 +595,7 @@ MonoBehaviour:
   target: {fileID: 551466451}
   heightMultiplier: 1
   noiseTiling: 10
-  speed: 0.1
+  speed: 0.02
   freq: 10
   amp: 1
   pers: 1
