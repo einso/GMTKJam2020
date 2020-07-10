@@ -55,11 +55,14 @@ public class TerrainControls : MonoBehaviour
             {
                 //desiredHeight = Mathf.PerlinNoise(((float)i / (float)size) * noiseTiling + Time.time * speed, ((float)j / (float)size) * noiseTiling + Time.time * speed) * heightMultiplier;
                 float x = (float) i / (float) size;
-                x *= noiseTiling;
+                //x *= noiseTiling;
                 //x += Time.time * speed;
 
                 float y = (float) j / (float) size;
-                y *= noiseTiling;
+                //y *= noiseTiling;
+                //x += Time.time * speed;
+
+                float z = 
                 //x += Time.time * speed;
 
                 
