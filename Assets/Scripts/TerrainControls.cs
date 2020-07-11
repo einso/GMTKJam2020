@@ -20,6 +20,7 @@ public class TerrainControls : MonoBehaviour
     public bool invokeApproach;
     public float gameTime;
     public bool terrainPlay;
+    Ball ball;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +32,17 @@ public class TerrainControls : MonoBehaviour
         if (invokeApproach)
             InvokeRepeating("TerrainUpdate", .1f, refreshRate);
 
-
+        ball = GameObject.FindObjectOfType<Ball>();
     }
 
     void Update()
     {
+
+        //wenn der ball fliegt darf sich das terrain bewegen
+        terrainPlay = ball.flying;
+
+        //muss nach einer zeit wahrscheinlich einfach geforced werden?
+
 
         if (!invokeApproach)
         {
@@ -45,6 +52,7 @@ public class TerrainControls : MonoBehaviour
                 gameTime += Time.deltaTime;
             }
         }
+
 
 
     }
