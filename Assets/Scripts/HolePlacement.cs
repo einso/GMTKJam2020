@@ -28,7 +28,9 @@ public class HolePlacement : MonoBehaviour
 
     void RandomPosition()
     {
-        myTransform.position = new Vector3(0, heightToCastFrom, 0);
+        float x = Random.Range(min, max);
+        float z = Random.Range(min, max);
+        myTransform.position = new Vector3(x, heightToCastFrom, z);
     }
 
     // Update is called once per frame
