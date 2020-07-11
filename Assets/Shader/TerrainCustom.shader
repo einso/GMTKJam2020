@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.40 
 // Shader Forge (c) Freya Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.40;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,cpap:True,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:33870,y:32683,varname:node_2865,prsc:2|diff-2569-RGB,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4905,x:32370,y:32222,varname:node_4905,prsc:2;n:type:ShaderForge.SFN_RemapRangeAdvanced,id:8322,x:32825,y:32480,varname:node_8322,prsc:2|IN-3682-OUT,IMIN-1677-OUT,IMAX-8050-OUT,OMIN-2295-OUT,OMAX-5280-OUT;n:type:ShaderForge.SFN_Vector1,id:2295,x:32486,y:32610,varname:node_2295,prsc:2,v1:0;n:type:ShaderForge.SFN_Vector1,id:5280,x:32486,y:32667,varname:node_5280,prsc:2,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:1677,x:32244,y:32435,ptovrint:False,ptlb:min height,ptin:_minheight,varname:node_1677,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:8050,x:32301,y:32524,ptovrint:False,ptlb:max height,ptin:_maxheight,varname:node_8050,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:80;n:type:ShaderForge.SFN_Tex2d,id:2569,x:33342,y:32335,ptovrint:False,ptlb:gradient,ptin:_gradient,varname:node_2569,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:abacaaa63214ac94eb483157a50dff53,ntxv:0,isnm:False|UVIN-103-OUT;n:type:ShaderForge.SFN_Append,id:103,x:33151,y:32252,varname:node_103,prsc:2|A-6439-OUT,B-8322-OUT;n:type:ShaderForge.SFN_Vector1,id:6439,x:32990,y:32066,varname:node_6439,prsc:2,v1:0;n:type:ShaderForge.SFN_Clamp,id:3682,x:32778,y:32199,varname:node_3682,prsc:2|IN-4905-Y,MIN-1677-OUT,MAX-8050-OUT;n:type:ShaderForge.SFN_FragmentPosition,id:929,x:32661,y:33108,varname:node_929,prsc:2;n:type:ShaderForge.SFN_DDX,id:1573,x:32911,y:33003,varname:node_1573,prsc:2|IN-929-XYZ;n:type:ShaderForge.SFN_DDY,id:9452,x:32911,y:33171,varname:node_9452,prsc:2|IN-929-XYZ;n:type:ShaderForge.SFN_Normalize,id:8554,x:33108,y:32979,varname:node_8554,prsc:2|IN-1573-OUT;n:type:ShaderForge.SFN_Normalize,id:229,x:33125,y:33198,varname:node_229,prsc:2|IN-9452-OUT;n:type:ShaderForge.SFN_Cross,id:4865,x:33279,y:33067,varname:node_4865,prsc:2|A-8554-OUT,B-229-OUT;n:type:ShaderForge.SFN_NormalVector,id:5147,x:33263,y:32851,prsc:2,pt:False;n:type:ShaderForge.SFN_Lerp,id:6079,x:33605,y:32942,varname:node_6079,prsc:2|A-5147-OUT,B-4865-OUT,T-4337-OUT;n:type:ShaderForge.SFN_Slider,id:4337,x:33408,y:33184,ptovrint:False,ptlb:normal test,ptin:_normaltest,varname:node_4337,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;proporder:5964-6665-7736-358-1813-1677-8050-2569-4337;pass:END;sub:END;*/
+/*SF_DATA;ver:1.40;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,cpap:True,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:33870,y:32683,varname:node_2865,prsc:2|diff-4817-OUT,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:33342,y:32558,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:c0e45be0b6cdbf94e8aad27f0103a7cc,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4905,x:32370,y:32222,varname:node_4905,prsc:2;n:type:ShaderForge.SFN_RemapRangeAdvanced,id:8322,x:32825,y:32480,varname:node_8322,prsc:2|IN-3682-OUT,IMIN-1677-OUT,IMAX-8050-OUT,OMIN-2295-OUT,OMAX-5280-OUT;n:type:ShaderForge.SFN_Vector1,id:2295,x:32486,y:32610,varname:node_2295,prsc:2,v1:0;n:type:ShaderForge.SFN_Vector1,id:5280,x:32486,y:32667,varname:node_5280,prsc:2,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:1677,x:32244,y:32435,ptovrint:False,ptlb:min height,ptin:_minheight,varname:node_1677,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:8050,x:32301,y:32524,ptovrint:False,ptlb:max height,ptin:_maxheight,varname:node_8050,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:80;n:type:ShaderForge.SFN_Tex2d,id:2569,x:33342,y:32335,ptovrint:False,ptlb:gradient,ptin:_gradient,varname:node_2569,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:abacaaa63214ac94eb483157a50dff53,ntxv:0,isnm:False|UVIN-103-OUT;n:type:ShaderForge.SFN_Append,id:103,x:33151,y:32252,varname:node_103,prsc:2|A-6439-OUT,B-8322-OUT;n:type:ShaderForge.SFN_Vector1,id:6439,x:32990,y:32066,varname:node_6439,prsc:2,v1:0;n:type:ShaderForge.SFN_Clamp,id:3682,x:32778,y:32199,varname:node_3682,prsc:2|IN-4905-Y,MIN-1677-OUT,MAX-8050-OUT;n:type:ShaderForge.SFN_FragmentPosition,id:929,x:32661,y:33108,varname:node_929,prsc:2;n:type:ShaderForge.SFN_DDX,id:1573,x:32911,y:33003,varname:node_1573,prsc:2|IN-929-XYZ;n:type:ShaderForge.SFN_DDY,id:9452,x:32911,y:33171,varname:node_9452,prsc:2|IN-929-XYZ;n:type:ShaderForge.SFN_Normalize,id:8554,x:33108,y:32979,varname:node_8554,prsc:2|IN-1573-OUT;n:type:ShaderForge.SFN_Normalize,id:229,x:33125,y:33198,varname:node_229,prsc:2|IN-9452-OUT;n:type:ShaderForge.SFN_Cross,id:4865,x:33279,y:33067,varname:node_4865,prsc:2|A-8554-OUT,B-229-OUT;n:type:ShaderForge.SFN_NormalVector,id:5147,x:33263,y:32851,prsc:2,pt:False;n:type:ShaderForge.SFN_Lerp,id:6079,x:33605,y:32942,varname:node_6079,prsc:2|A-5147-OUT,B-4865-OUT,T-4337-OUT;n:type:ShaderForge.SFN_Slider,id:4337,x:33408,y:33184,ptovrint:False,ptlb:normal test,ptin:_normaltest,varname:node_4337,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Multiply,id:4817,x:33567,y:32457,varname:node_4817,prsc:2|A-2569-RGB,B-7736-RGB;proporder:5964-6665-7736-358-1813-1677-8050-2569-4337;pass:END;sub:END;*/
 
 Shader "Shader Forge/TerrainCustom" {
     Properties {
@@ -43,6 +43,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
             #pragma target 3.0
+            uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
@@ -55,28 +56,31 @@ Shader "Shader Forge/TerrainCustom" {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
+                float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-                float2 uv1 : TEXCOORD0;
-                float2 uv2 : TEXCOORD1;
-                float4 posWorld : TEXCOORD2;
-                float3 normalDir : TEXCOORD3;
-                float3 tangentDir : TEXCOORD4;
-                float3 bitangentDir : TEXCOORD5;
-                LIGHTING_COORDS(6,7)
-                UNITY_FOG_COORDS(8)
+                float2 uv0 : TEXCOORD0;
+                float2 uv1 : TEXCOORD1;
+                float2 uv2 : TEXCOORD2;
+                float4 posWorld : TEXCOORD3;
+                float3 normalDir : TEXCOORD4;
+                float3 tangentDir : TEXCOORD5;
+                float3 bitangentDir : TEXCOORD6;
+                LIGHTING_COORDS(7,8)
+                UNITY_FOG_COORDS(9)
                 #if defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH)
-                    float4 ambientOrLightmapUV : TEXCOORD9;
+                    float4 ambientOrLightmapUV : TEXCOORD10;
                 #endif
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 UNITY_SETUP_INSTANCE_ID( v );
                 UNITY_TRANSFER_INSTANCE_ID( v, o );
+                o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 #ifdef LIGHTMAP_ON
@@ -169,7 +173,8 @@ Shader "Shader Forge/TerrainCustom" {
                 float node_2295 = 0.0;
                 float2 node_103 = float2(0.0,(node_2295 + ( (clamp(i.posWorld.g,_minheight_var,_maxheight_var) - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
                 float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
-                float3 diffuseColor = _gradient_var.rgb; // Need this for specular when using metallic
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
+                float3 diffuseColor = (_gradient_var.rgb*_MainTex_var.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -240,6 +245,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
             #pragma target 3.0
+            uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
@@ -252,25 +258,28 @@ Shader "Shader Forge/TerrainCustom" {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
+                float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-                float2 uv1 : TEXCOORD0;
-                float2 uv2 : TEXCOORD1;
-                float4 posWorld : TEXCOORD2;
-                float3 normalDir : TEXCOORD3;
-                float3 tangentDir : TEXCOORD4;
-                float3 bitangentDir : TEXCOORD5;
-                LIGHTING_COORDS(6,7)
-                UNITY_FOG_COORDS(8)
+                float2 uv0 : TEXCOORD0;
+                float2 uv1 : TEXCOORD1;
+                float2 uv2 : TEXCOORD2;
+                float4 posWorld : TEXCOORD3;
+                float3 normalDir : TEXCOORD4;
+                float3 tangentDir : TEXCOORD5;
+                float3 bitangentDir : TEXCOORD6;
+                LIGHTING_COORDS(7,8)
+                UNITY_FOG_COORDS(9)
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 UNITY_SETUP_INSTANCE_ID( v );
                 UNITY_TRANSFER_INSTANCE_ID( v, o );
+                o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
@@ -314,7 +323,8 @@ Shader "Shader Forge/TerrainCustom" {
                 float node_2295 = 0.0;
                 float2 node_103 = float2(0.0,(node_2295 + ( (clamp(i.posWorld.g,_minheight_var,_maxheight_var) - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
                 float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
-                float3 diffuseColor = _gradient_var.rgb; // Need this for specular when using metallic
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
+                float3 diffuseColor = (_gradient_var.rgb*_MainTex_var.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -374,6 +384,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
             #pragma target 3.0
+            uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
@@ -384,20 +395,23 @@ Shader "Shader Forge/TerrainCustom" {
             struct VertexInput {
                 UNITY_VERTEX_INPUT_INSTANCE_ID
                 float4 vertex : POSITION;
+                float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-                float2 uv1 : TEXCOORD0;
-                float2 uv2 : TEXCOORD1;
-                float4 posWorld : TEXCOORD2;
+                float2 uv0 : TEXCOORD0;
+                float2 uv1 : TEXCOORD1;
+                float2 uv2 : TEXCOORD2;
+                float4 posWorld : TEXCOORD3;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 UNITY_SETUP_INSTANCE_ID( v );
                 UNITY_TRANSFER_INSTANCE_ID( v, o );
+                o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
@@ -417,7 +431,8 @@ Shader "Shader Forge/TerrainCustom" {
                 float node_2295 = 0.0;
                 float2 node_103 = float2(0.0,(node_2295 + ( (clamp(i.posWorld.g,_minheight_var,_maxheight_var) - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
                 float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
-                float3 diffColor = _gradient_var.rgb;
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
+                float3 diffColor = (_gradient_var.rgb*_MainTex_var.rgb);
                 float specularMonochrome;
                 float3 specColor;
                 float _Metallic_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Metallic );
