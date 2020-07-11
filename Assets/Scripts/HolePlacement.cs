@@ -19,5 +19,12 @@ public class HolePlacement : MonoBehaviour
     void Update()
     {
         Vector3 castPosition = new Vector3(myTransform.position.x, heightToCastFrom, myTransform.position.z);
+
+        RaycastHit hito;
+        if (Physics.Raycast(castPosition, Vector3.down, out hito))
+        {
+            myTransform.position = hito.point;
+            myTransform.up = hito.normal;
+        }
     }
 }
