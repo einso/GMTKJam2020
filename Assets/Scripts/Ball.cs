@@ -23,12 +23,7 @@ public class Ball : MonoBehaviour
     {
 
 
-        if (reloadTimer < 0 && !flying)
-        {
-
-
-            Shot();
-        }
+        
     }
 
     private void Shot()
@@ -55,7 +50,6 @@ public class Ball : MonoBehaviour
             {
                 state = ShotState.ReadyShot;
                 print("ready");
-                return;
             }
 
             if (state == ShotState.Hit)
@@ -122,6 +116,11 @@ public class Ball : MonoBehaviour
         if (!flying)
         {
             LockMovement();
+        }
+
+        if (reloadTimer < 0 && !flying)
+        {
+            Shot();
         }
 
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
