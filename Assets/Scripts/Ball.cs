@@ -121,13 +121,9 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (!flying)
-        {
-            LockMovement();
-        }
-
         if (reloadTimer < 0 && !flying)
         {
+            LockMovement();
             Shot();
         }
 
