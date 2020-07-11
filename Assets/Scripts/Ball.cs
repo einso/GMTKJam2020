@@ -26,17 +26,28 @@ public class Ball : MonoBehaviour
 
     private void Shot()
     {
-        
+
 
         if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
         {
-            body.AddForce(arrow.forward * power);
-            reloadTimer = 1;
-            flying = true;
-            state = ShotState.WaitForShot;
 
-            if (state == ShotState.WaitForShot){
-                //Progre
+
+            if (state == ShotState.ReadyShot)
+            {
+                //Progressbar
+            }
+
+            if (state == ShotState.WaitForShot)
+            {
+                state = ShotState.ReadyShot;
+            }
+
+            if (state == ShotState.Hit)
+            {
+                body.AddForce(arrow.forward * power);
+                reloadTimer = 1;
+                flying = true;
+                state = ShotState.WaitForShot;
             }
 
 
