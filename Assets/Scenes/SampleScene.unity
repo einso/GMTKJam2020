@@ -249,7 +249,7 @@ MonoBehaviour:
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   flying: 0
-  maxVelocity: 3
+  maxVelocity: 3.5
   checkerRadius: 10
 --- !u!1 &705507993
 GameObject:
