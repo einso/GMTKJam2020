@@ -37,13 +37,7 @@ public class Ball : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (state == ShotState.Hit)
-            {
-                body.AddForce(arrow.forward * power);
-                reloadTimer = 1;
-                flying = true;
-                state = ShotState.WaitForShot;
-            }
+            
 
             if (state == ShotState.ReadyShot)
             {
@@ -55,6 +49,19 @@ public class Ball : MonoBehaviour
 
 
                 print("ready");
+            }
+
+            if (state == ShotState.WaitForShot)
+            {
+                state = ShotState.ReadyShot;
+            }
+
+            if (state == ShotState.Hit)
+            {
+                body.AddForce(arrow.forward * power);
+                reloadTimer = 1;
+                flying = true;
+                state = ShotState.WaitForShot;
             }
 
         }
