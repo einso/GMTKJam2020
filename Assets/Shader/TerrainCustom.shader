@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.40 
 // Shader Forge (c) Freya Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.40;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,cpap:True,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:33129,y:32715,varname:node_2865,prsc:2|diff-8322-OUT,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4905,x:32442,y:32282,varname:node_4905,prsc:2;n:type:ShaderForge.SFN_RemapRangeAdvanced,id:8322,x:32726,y:32469,varname:node_8322,prsc:2|IN-4905-Y,IMIN-1677-OUT,IMAX-8050-OUT,OMIN-2295-OUT,OMAX-5280-OUT;n:type:ShaderForge.SFN_Vector1,id:2295,x:32486,y:32610,varname:node_2295,prsc:2,v1:0;n:type:ShaderForge.SFN_Vector1,id:5280,x:32517,y:32666,varname:node_5280,prsc:2,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:1677,x:32244,y:32435,ptovrint:False,ptlb:min height,ptin:_minheight,varname:node_1677,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:8050,x:32301,y:32524,ptovrint:False,ptlb:max height,ptin:_maxheight,varname:node_8050,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:80;proporder:5964-6665-7736-358-1813-1677-8050;pass:END;sub:END;*/
+/*SF_DATA;ver:1.40;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,cpap:True,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:33465,y:32701,varname:node_2865,prsc:2|diff-2569-RGB,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4905,x:32442,y:32282,varname:node_4905,prsc:2;n:type:ShaderForge.SFN_RemapRangeAdvanced,id:8322,x:32726,y:32469,varname:node_8322,prsc:2|IN-4905-Y,IMIN-1677-OUT,IMAX-8050-OUT,OMIN-2295-OUT,OMAX-5280-OUT;n:type:ShaderForge.SFN_Vector1,id:2295,x:32486,y:32610,varname:node_2295,prsc:2,v1:0;n:type:ShaderForge.SFN_Vector1,id:5280,x:32517,y:32666,varname:node_5280,prsc:2,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:1677,x:32244,y:32435,ptovrint:False,ptlb:min height,ptin:_minheight,varname:node_1677,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:8050,x:32301,y:32524,ptovrint:False,ptlb:max height,ptin:_maxheight,varname:node_8050,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:80;n:type:ShaderForge.SFN_Tex2d,id:2569,x:33162,y:32329,ptovrint:False,ptlb:gradient,ptin:_gradient,varname:node_2569,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:abacaaa63214ac94eb483157a50dff53,ntxv:0,isnm:False|UVIN-103-OUT;n:type:ShaderForge.SFN_Append,id:103,x:32967,y:32329,varname:node_103,prsc:2|A-6439-OUT,B-8322-OUT;n:type:ShaderForge.SFN_Vector1,id:6439,x:32769,y:32273,varname:node_6439,prsc:2,v1:0;proporder:5964-6665-7736-358-1813-1677-8050-2569;pass:END;sub:END;*/
 
 Shader "Shader Forge/TerrainCustom" {
     Properties {
@@ -12,6 +12,7 @@ Shader "Shader Forge/TerrainCustom" {
         _Gloss ("Gloss", Range(0, 1)) = 0.8
         _minheight ("min height", Float ) = 0
         _maxheight ("max height", Float ) = 80
+        _gradient ("gradient", 2D) = "white" {}
     }
     SubShader {
         Tags {
@@ -42,6 +43,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile_fog
             #pragma target 3.0
             uniform sampler2D _BumpMap; uniform float4 _BumpMap_ST;
+            uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
                 UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)
@@ -170,8 +172,9 @@ Shader "Shader Forge/TerrainCustom" {
                 float _minheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _minheight );
                 float _maxheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _maxheight );
                 float node_2295 = 0.0;
-                float node_8322 = (node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var));
-                float3 diffuseColor = float3(node_8322,node_8322,node_8322); // Need this for specular when using metallic
+                float2 node_103 = float2(0.0,(node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
+                float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
+                float3 diffuseColor = _gradient_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -243,6 +246,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile_fog
             #pragma target 3.0
             uniform sampler2D _BumpMap; uniform float4 _BumpMap_ST;
+            uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
                 UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)
@@ -319,8 +323,9 @@ Shader "Shader Forge/TerrainCustom" {
                 float _minheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _minheight );
                 float _maxheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _maxheight );
                 float node_2295 = 0.0;
-                float node_8322 = (node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var));
-                float3 diffuseColor = float3(node_8322,node_8322,node_8322); // Need this for specular when using metallic
+                float2 node_103 = float2(0.0,(node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
+                float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
+                float3 diffuseColor = _gradient_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -380,6 +385,7 @@ Shader "Shader Forge/TerrainCustom" {
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
             #pragma target 3.0
+            uniform sampler2D _gradient; uniform float4 _gradient_ST;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)
                 UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)
@@ -420,8 +426,9 @@ Shader "Shader Forge/TerrainCustom" {
                 float _minheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _minheight );
                 float _maxheight_var = UNITY_ACCESS_INSTANCED_PROP( Props, _maxheight );
                 float node_2295 = 0.0;
-                float node_8322 = (node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var));
-                float3 diffColor = float3(node_8322,node_8322,node_8322);
+                float2 node_103 = float2(0.0,(node_2295 + ( (i.posWorld.g - _minheight_var) * (1.0 - node_2295) ) / (_maxheight_var - _minheight_var)));
+                float4 _gradient_var = tex2D(_gradient,TRANSFORM_TEX(node_103, _gradient));
+                float3 diffColor = _gradient_var.rgb;
                 float specularMonochrome;
                 float3 specColor;
                 float _Metallic_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Metallic );
