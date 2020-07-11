@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
 
                 //lock arrow movement
 
-                
+                state = ShotState.Hit;
                 
             }
 
