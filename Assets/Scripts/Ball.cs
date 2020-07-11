@@ -25,10 +25,7 @@ public class Ball : MonoBehaviour
 
         if (reloadTimer < 0 && !flying)
         {
-            if (state == ShotState.WaitForShot)
-            {
-                state = ShotState.ReadyShot;
-            }
+            
 
             Shot();
         }
