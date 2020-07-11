@@ -21,5 +21,8 @@ public class CameraControls : MonoBehaviour
         //follow ball pos
         myTransform.position += target.position - lastPosition;
         lastPosition = target.position;
+
+        //rotate around ball
+        myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
     }
 }
