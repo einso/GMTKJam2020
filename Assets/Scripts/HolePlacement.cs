@@ -45,5 +45,10 @@ public class HolePlacement : MonoBehaviour
             myTransform.up = hito.normal;
             goalpost.position = hito.point;
         }
+
+        //cheat code
+        if (Input.GetKeyDown(KeyCode.N)){
+            RandomPosition();
+        }
     }
 }
