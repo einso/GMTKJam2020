@@ -646,12 +646,13 @@ MonoBehaviour:
   invokeApproach: 0
   gameTime: 0
   terrainPlay: 0
+  randomizeSeed: 0
   controlPosition: {x: 200, y: 0.5, z: 200}
   freq: 5
   amp: 1
   pers: 1
   oct: 1
-  seed: 1
+  seed: 0
 --- !u!1001 &1780309040
 PrefabInstance:
   m_ObjectHideFlags: 0
