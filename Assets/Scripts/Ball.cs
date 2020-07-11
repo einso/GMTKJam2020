@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     public float power = 100;
     public Transform arrow;
     public float reloadTimer = 1;
+    public bool flying;
 
     Rigidbody body;
 
