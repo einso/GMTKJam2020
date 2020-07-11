@@ -47,7 +47,7 @@ public class TerrainControls : MonoBehaviour
     {
 
         //wenn der ball fliegt darf sich das terrain bewegen
-        terrainPlay = ball.flying;
+        terrainPlay = ball.flying && ball.reloadTimer > 0;
 
         //muss nach einer zeit wahrscheinlich einfach geforced werden?
 
