@@ -125,6 +125,8 @@ public class Ball : MonoBehaviour
             Shot();
         }
 
+        print(Time.time);
+
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
 }
