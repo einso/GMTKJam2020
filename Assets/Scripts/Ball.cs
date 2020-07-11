@@ -89,8 +89,10 @@ public class Ball : MonoBehaviour
     void Update()
     {
         //reload timer ausnutzen für roll zeitraum
-        reloadTimer -= Time.deltaTime;
-        //print(reloadTimer);
+        if (!flying)
+            reloadTimer -= Time.deltaTime;
+
+        print(reloadTimer);
 
         /*
         if (body.velocity.magnitude < maxVelocity || Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
