@@ -19,7 +19,7 @@ public class ArrowController : MonoBehaviour
     void Update()
     {
         //print(HelperFunctions.Test(Vector3.zero));
-        myTransform.forward = cam.forward;
+        myTransform.forward = HelperFunctions.FlattenY(cam.forward, true);
         myTransform.position = ball.position;
     }
 }
