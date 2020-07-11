@@ -28,7 +28,7 @@ public class ArrowController : MonoBehaviour
         if (ballObject.state != Ball.ShotState.ReadyShot)
             myTransform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * speed * Time.deltaTime, Space.World);
 
-        rendererMesh.enabled = !ballObject.flying;
+        rendererMesh.enabled = !ballObject.flying && ballObject.reloadTimer < 0;
     }
 
     // Update is called once per frame
