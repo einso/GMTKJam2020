@@ -58,6 +58,7 @@ public class Ball : MonoBehaviour
 
             if (state == ShotState.Hit)
             {
+                power = Mathf.Lerp(minPower, maxPower, currentPower);
                 body.AddForce(arrow.forward * power);
                 reloadTimer = 1;
                 flying = true;
