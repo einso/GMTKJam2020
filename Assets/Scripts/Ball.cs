@@ -21,14 +21,9 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         
-
-        if (reloadTimer < 0 && !flying)
-        {
-            
-
-            Shot();
-        }
     }
 
     private void Shot()
@@ -37,13 +32,7 @@ public class Ball : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (state == ShotState.Hit)
-            {
-                body.AddForce(arrow.forward * power);
-                reloadTimer = 1;
-                flying = true;
-                state = ShotState.WaitForShot;
-            }
+            
 
             if (state == ShotState.ReadyShot)
             {
@@ -53,9 +42,24 @@ public class Ball : MonoBehaviour
 
                 //lock arrow movement
 
+                state = ShotState.Hit;
+                
+            }
 
+            if (state == ShotState.WaitForShot)
+            {
+                state = ShotState.ReadyShot;
                 print("ready");
             }
+
+            if (state == ShotState.Hit)
+            {
+                body.AddForce(arrow.forward * power);
+                reloadTimer = 1;
+                flying = true;
+                state = ShotState.WaitForShot;
+            }
+
 
         }
     }
@@ -114,6 +118,11 @@ public class Ball : MonoBehaviour
             LockMovement();
         }
 
-        print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
+        if (reloadTimer < 0 && !flying)
+        {
+            Shot();
+        }
+
+        //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
 }

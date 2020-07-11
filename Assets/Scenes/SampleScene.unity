@@ -251,7 +251,7 @@ MonoBehaviour:
   flying: 0
   maxVelocity: 3.5
   checkerRadius: 10
-  state: 3
+  state: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
