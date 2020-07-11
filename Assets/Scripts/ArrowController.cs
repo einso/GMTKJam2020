@@ -20,5 +20,6 @@ public class ArrowController : MonoBehaviour
     {
         //print(HelperFunctions.Test(Vector3.zero));
         myTransform.forward = cam.forward;
+        myTransform.position = ball.position;
     }
 }
