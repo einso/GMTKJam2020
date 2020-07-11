@@ -21,22 +21,41 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        Shot();
+        
+
+        if (reloadTimer < 0 && !flying)
+        {
+            
+
+            Shot();
+        }
     }
 
     private void Shot()
     {
-        if (state == ShotState.None)
-        {
-            state = ShotState.WaitForShot;
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
-        {
-            body.AddForce(arrow.forward * power);
-            reloadTimer = 1;
-            flying = true;
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (state == ShotState.Hit)
+            {
+                body.AddForce(arrow.forward * power);
+                reloadTimer = 1;
+                flying = true;
+                state = ShotState.WaitForShot;
+            }
+
+            if (state == ShotState.ReadyShot)
+            {
+                //Progressbar somewhere else
+
+                //only use for transition
+
+                //lock arrow movement
+
+
+                print("ready");
+            }
 
         }
     }
@@ -46,7 +65,6 @@ public class Ball : MonoBehaviour
         WaitForShot,
         ReadyShot,
         Hit,
-        None
     }
 
     public ShotState state;
