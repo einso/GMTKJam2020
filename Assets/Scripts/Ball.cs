@@ -22,13 +22,21 @@ public class Ball : MonoBehaviour
     void FixedUpdate()
     {
         Shot();
+
+        if (reloadTimer < 0 && !flying)
+        {
+            if (state == ShotState.WaitForShot)
+            {
+                state = ShotState.ReadyShot;
+            }
+        }
     }
 
     private void Shot()
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
+        if (Input.GetKeyDown(KeyCode.Space) && )
         {
             if (state == ShotState.Hit)
             {
@@ -45,10 +53,7 @@ public class Ball : MonoBehaviour
                 //only use for transition
             }
 
-            if (state == ShotState.WaitForShot)
-            {
-                state = ShotState.ReadyShot;
-            }
+
 
 
 
