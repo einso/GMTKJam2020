@@ -1211,6 +1211,24 @@ MonoBehaviour:
   pers: 1
   oct: 1
   seed: 0
+--- !u!1 &1452300290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9ad247c8e22b5364fb62c6d4876655af,
+    type: 3}
+  m_PrefabInstance: {fileID: 1068132877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1452300291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452300290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79836e4c3dd6d1c40aef03eb26b44d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1780309040
 PrefabInstance:
   m_ObjectHideFlags: 0
