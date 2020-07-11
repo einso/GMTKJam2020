@@ -18,7 +18,7 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Mouse lock
+        //Mouse lock, muss escapebar sein TODO
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
