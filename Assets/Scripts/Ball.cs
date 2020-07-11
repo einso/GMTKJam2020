@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     public float power = 100;
     public Transform arrow;
+    public float reloadTimer = 1;
 
     Rigidbody body;
 
@@ -17,15 +18,16 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0)
         {
             body.AddForce(arrow.forward * power);
+            reloadTimer = 1;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        reloadTimer -= Time.deltaTime;
     }
 }
