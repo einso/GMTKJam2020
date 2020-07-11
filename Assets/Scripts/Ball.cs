@@ -26,26 +26,37 @@ public class Ball : MonoBehaviour
 
     private void Shot()
     {
+        if (state == ShotState.None)
+        {
+            state = ShotState.WaitForShot;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
         {
             body.AddForce(arrow.forward * power);
             reloadTimer = 1;
             flying = true;
+
+
         }
     }
 
-    void LockMovement(){
+    public enum ShotState
+    {
+        WaitForShot,
+        ReadyShot,
+        Hit,
+        None
+    }
+
+    public ShotState state;
+
+    void LockMovement()
+    {
         body.velocity = Vector3.zero;
-        
-    }
-
-    void WaitForShot(){
 
     }
 
-    void ReadyShot(){
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -80,7 +91,8 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (!flying){
+        if (!flying)
+        {
             LockMovement();
         }
 
