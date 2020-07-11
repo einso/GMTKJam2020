@@ -11,11 +11,17 @@ public class ArrowController : MonoBehaviour
     Transform myTransform;
 
     public bool autoRotate;
+    public float speed = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         myTransform = transform;
+    }
+
+    void Update()
+    {
+        myTransform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * speed, Space.World);
     }
 
     // Update is called once per frame
