@@ -51,8 +51,13 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            if (Physics.OverlapSphere(body.position, checkerRadius).Length <= 1){
-                
+            if (Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
+            {
+                flying = true;
+            }
+            else
+            {
+                flying = false;
             }
         }
 
