@@ -690,3 +690,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 505306488}
   cam: {fileID: 963194228}
+  angle: -45
