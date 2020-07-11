@@ -53,6 +53,11 @@ public class Ball : MonoBehaviour
                 //Progressbar somewhere else
 
                 //only use for transition
+
+                //lock arrow movement
+
+
+                print("ready");
             }
 
         }
