@@ -39,9 +39,9 @@ public class TerrainControls : MonoBehaviour
 
         if (!invokeApproach)
         {
+            TerrainUpdate();
             if (terrainPlay)
             {
-                TerrainUpdate();
                 gameTime += Time.deltaTime;
             }
         }
