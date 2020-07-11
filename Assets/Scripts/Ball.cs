@@ -30,18 +30,6 @@ public class Ball : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
         {
-
-
-            if (state == ShotState.ReadyShot)
-            {
-                //Progressbar
-            }
-
-            if (state == ShotState.WaitForShot)
-            {
-                state = ShotState.ReadyShot;
-            }
-
             if (state == ShotState.Hit)
             {
                 body.AddForce(arrow.forward * power);
@@ -49,6 +37,20 @@ public class Ball : MonoBehaviour
                 flying = true;
                 state = ShotState.WaitForShot;
             }
+
+            if (state == ShotState.ReadyShot)
+            {
+                //Progressbar somewhere else
+
+                //only use for transition
+            }
+
+            if (state == ShotState.WaitForShot)
+            {
+                state = ShotState.ReadyShot;
+            }
+
+
 
 
         }
