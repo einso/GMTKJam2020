@@ -10594,6 +10594,7 @@ MonoBehaviour:
   maxUpVector: 0
   arrow: {fileID: 2029917369}
   reloadTimer: 1
+  reloadTimerFull: 2
   flying: 0
   maxVelocity: 4
   checkerRadius: 10
