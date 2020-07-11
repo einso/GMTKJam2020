@@ -49,11 +49,13 @@ public class TerrainControls : MonoBehaviour
 
     }
 
+    public Vector3 controlPosition = new Vector3(200, .5f, 200);
+
     // Update is called once per frame
     void TerrainUpdate()
     {
         // get the normalized position of this game object relative to the terrain
-        Vector3 tempCoord = (new Vector3(100, .5f, 100) - terr.gameObject.transform.position);
+        Vector3 tempCoord = (controlPosition - terr.gameObject.transform.position);
         Vector3 coord;
         coord.x = tempCoord.x / terr.terrainData.size.x;
         coord.y = tempCoord.y / terr.terrainData.size.y;
