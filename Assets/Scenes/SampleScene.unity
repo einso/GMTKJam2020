@@ -627,7 +627,7 @@ MonoBehaviour:
   size: 257
   heightMultiplier: 1
   noiseTiling: 10
-  speed: 0.1
+  speed: 0.05
   refreshRate: 0.05
   invokeApproach: 0
   gameTime: 0
