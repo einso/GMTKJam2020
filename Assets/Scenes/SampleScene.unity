@@ -1230,6 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heightToCastFrom: 500
+  goalpost: {fileID: 1745168335}
 --- !u!1001 &1745168334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,6 +1300,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce8aaed9a773a46469ae8bcab7231feb, type: 3}
+--- !u!4 &1745168335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: ce8aaed9a773a46469ae8bcab7231feb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1745168334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780309040
 PrefabInstance:
   m_ObjectHideFlags: 0
