@@ -16,6 +16,13 @@ public class HolePlacement : MonoBehaviour
         myTransform = transform;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player"){
+            print("HIT " + Time.time);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
