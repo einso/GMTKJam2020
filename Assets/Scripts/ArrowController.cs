@@ -21,7 +21,7 @@ public class ArrowController : MonoBehaviour
 
     void Update()
     {
-        myTransform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * speed, Space.World);
+        myTransform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * speed * Time.deltaTime, Space.World);
     }
 
     // Update is called once per frame
