@@ -13,21 +13,21 @@ public class ArrowController : MonoBehaviour
     public bool autoRotate;
     public float speed = 1;
     Ball ballObject;
-    MeshRenderer renderer;
+    MeshRenderer rendererMesh;
 
     // Start is called before the first frame update
     void Start()
     {
         myTransform = transform;
         ballObject = GameObject.FindObjectOfType<Ball>();
-        renderer = GetComponent<MeshRenderer>();
+        rendererMesh = GetComponent<MeshRenderer>();
     }
 
     void Update()
     {
         myTransform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * speed * Time.deltaTime, Space.World);
 
-        renderer.enabled = !ballObject.flying;
+        rendererMesh.enabled = !ballObject.flying;
     }
 
     // Update is called once per frame
