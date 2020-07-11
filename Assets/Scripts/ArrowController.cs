@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
-    public Transform target;
-    
+    public Transform ball;
+    public Transform cam;
+
     // Start is called before the first frame update
     void Start()
     {
