@@ -129,8 +129,13 @@ public class Ball : MonoBehaviour
 
         if (state == ShotState.ReadyShot){
             //update ui power bar
+            currentPower = Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed);
+            powerbar.text = "Power " + currentPower;
         }
 
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
+
+    public float currentPower;
+    public float powerSpeed = .1f;
 }
