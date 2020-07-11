@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     public float minUpVector, maxUpVector;
     public Transform arrow;
     public float reloadTimer = 1;
+    public float reloadTimerFull = 2;
     public bool flying;
     public float maxVelocity = 4;
     public float checkerRadius = 10;
@@ -60,7 +61,7 @@ public class Ball : MonoBehaviour
             {
                 power = Mathf.Lerp(minPower, maxPower, currentPower);
                 body.AddForce(arrow.forward * power);
-                reloadTimer = 1;
+                reloadTimer = reloadTimerFull;
                 flying = true;
                 state = ShotState.WaitForShot;
             }
@@ -119,6 +120,11 @@ public class Ball : MonoBehaviour
             {
                 flying = false;
             }
+        }
+
+        if (flying)
+        {
+            reloadTimer = reloadTimerFull;
         }
 
         if (reloadTimer < 0 && !flying)
