@@ -59,6 +59,7 @@ public class Ball : MonoBehaviour
 
             if (state == ShotState.Hit)
             {
+                body.isKinematic = false;
                 power = Mathf.Lerp(minPower, maxPower, currentPower);
                 body.AddForce(arrow.forward * power);
                 reloadTimer = reloadTimerFull;
@@ -82,6 +83,7 @@ public class Ball : MonoBehaviour
     void LockMovement()
     {
         body.velocity = Vector3.zero;
+        body.isKinematic = true;
 
     }
 
