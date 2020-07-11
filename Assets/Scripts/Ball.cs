@@ -21,11 +21,20 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
+        Shot();
+    }
+
+    private void Shot()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
         {
             body.AddForce(arrow.forward * power);
             reloadTimer = 1;
         }
+    }
+
+    void LockMovement(){
+
     }
 
     // Update is called once per frame
@@ -59,6 +68,10 @@ public class Ball : MonoBehaviour
             {
                 flying = false;
             }
+        }
+
+        if (!flying){
+            LockMovement();
         }
 
         print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
