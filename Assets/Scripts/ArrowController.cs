@@ -10,6 +10,8 @@ public class ArrowController : MonoBehaviour
 
     Transform myTransform;
 
+    public bool autoRotate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,14 @@ public class ArrowController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //flatten vector
-        myTransform.forward = HelperFunctions.FlattenY(cam.forward, true);
+        if (autoRotate)
+        {
+            //flatten vector
+            myTransform.forward = HelperFunctions.FlattenY(cam.forward, true);
 
-        //angle rotate
-        myTransform.Rotate(myTransform.right, angle, Space.World);
+            //angle rotate
+            myTransform.Rotate(myTransform.right, angle, Space.World);
+        }
 
         //follow ball
         myTransform.position = ball.position;
