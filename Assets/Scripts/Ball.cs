@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
             if (state == ShotState.WaitForShot)
             {
                 state = ShotState.ReadyShot;
-                print("ready");
+                //print("ready");
             }
 
             if (state == ShotState.Hit)
