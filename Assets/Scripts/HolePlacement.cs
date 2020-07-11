@@ -8,6 +8,7 @@ public class HolePlacement : MonoBehaviour
     public float heightToCastFrom = 100;
 
     Transform myTransform;
+    public Transform goalpost;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class HolePlacement : MonoBehaviour
         {
             myTransform.position = hito.point;
             myTransform.up = hito.normal;
+            goalpost.position = hito.point;
         }
     }
 }
