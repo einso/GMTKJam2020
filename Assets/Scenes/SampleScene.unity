@@ -253,7 +253,7 @@ MonoBehaviour:
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   flying: 0
-  maxVelocity: 3.5
+  maxVelocity: 4
   checkerRadius: 10
   powerbar: {fileID: 578125426}
   state: 0
