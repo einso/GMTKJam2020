@@ -78,7 +78,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - _maxheight: 80
-    - _minheight: 10
+    - _minheight: 24.6
     m_Colors:
     - _Color: {r: 0.04470251, g: 0.5283019, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
