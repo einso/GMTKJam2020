@@ -245,7 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6367124c33c50244a88aca0e9c36003f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 100
+  power: 1000
+  arrow: {fileID: 2029917369}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,3 +729,9 @@ MonoBehaviour:
   angle: -45
   autoRotate: 0
   speed: 100
+--- !u!4 &2029917369 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6cdcb288b046ab243a2bc6efde9da8e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202091738}
+  m_PrefabAsset: {fileID: 0}
