@@ -9,6 +9,7 @@ public class HolePlacement : MonoBehaviour
 
     Transform myTransform;
     public Transform goalpost;
+    public float min, max;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,10 @@ public class HolePlacement : MonoBehaviour
         if (other.tag == "Player"){
             print("HIT " + Time.time);
         }
+    }
+
+    void RandomPosition(){
+
     }
 
     // Update is called once per frame
