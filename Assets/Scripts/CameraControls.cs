@@ -29,7 +29,7 @@ public class CameraControls : MonoBehaviour
 
         //rotate around ball
         myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
-        myTransform.RotateAround(target.position, myTransform.right, Input.GetAxis("Mouse Y"));
+        myTransform.RotateAround(target.position, myTransform.right, -Input.GetAxis("Mouse Y"));
 
 
         //reset level
