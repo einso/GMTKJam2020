@@ -125,7 +125,9 @@ public class Ball : MonoBehaviour
             Shot();
         }
 
-        print(Time.time);
+        if (state == ShotState.ReadyShot){
+            //update ui power bar
+        }
 
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
