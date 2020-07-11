@@ -31,18 +31,22 @@ public class TerrainControls : MonoBehaviour
         if (invokeApproach)
             InvokeRepeating("TerrainUpdate", .1f, refreshRate);
 
-        
+
     }
 
-    void Update(){
+    void Update()
+    {
 
-        if (!invokeApproach){
-            TerrainUpdate();
+        if (!invokeApproach)
+        {
+            if (terrainPlay)
+            {
+                TerrainUpdate();
+                gameTime += Time.deltaTime;
+            }
         }
 
-        if (terrainPlay){
-            gameTime += Time.deltaTime;
-        }
+
     }
 
     // Update is called once per frame
