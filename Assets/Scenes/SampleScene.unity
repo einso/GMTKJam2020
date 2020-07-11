@@ -1231,6 +1231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightToCastFrom: 500
   goalpost: {fileID: 1745168335}
+  min: 50
+  max: 350
 --- !u!135 &1452300292
 SphereCollider:
   m_ObjectHideFlags: 0
