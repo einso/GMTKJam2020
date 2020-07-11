@@ -19,5 +19,7 @@ public class CameraControls : MonoBehaviour
     void Update()
     {
         myTransform.position += target.position - lastPosition;
+
+        lastPosition = target.position;
     }
 }
