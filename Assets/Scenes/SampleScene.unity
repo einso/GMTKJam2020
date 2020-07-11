@@ -246,6 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 1500
+  minPower: 500
+  maxPower: 3000
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   flying: 0
