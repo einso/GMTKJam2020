@@ -255,7 +255,7 @@ MonoBehaviour:
   flying: 0
   maxVelocity: 4
   checkerRadius: 10
-  powerbar: {fileID: 578125426}
+  powerbar: {fileID: 1198918043}
   state: 0
   currentPower: 0
   powerSpeed: 2
@@ -276,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &578125425
 RectTransform:
   m_ObjectHideFlags: 0
