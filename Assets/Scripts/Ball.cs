@@ -122,6 +122,11 @@ public class Ball : MonoBehaviour
             }
         }
 
+        if (flying)
+        {
+            reloadTimer = reloadTimerFull;
+        }
+
         if (reloadTimer < 0 && !flying)
         {
             LockMovement();
