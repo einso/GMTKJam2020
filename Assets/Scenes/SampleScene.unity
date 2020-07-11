@@ -258,7 +258,7 @@ MonoBehaviour:
   powerbar: {fileID: 1198918043}
   state: 0
   currentPower: 0
-  powerSpeed: 2
+  powerSpeed: 4
 --- !u!1 &578125424
 GameObject:
   m_ObjectHideFlags: 0
