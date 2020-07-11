@@ -81,7 +81,7 @@ public class TerrainControls : MonoBehaviour
                 //y *= noiseTiling;
                 //x += Time.time * speed;
 
-                float z = Time.time * speed;
+                float z = gameTime * speed;
                 //x += Time.time * speed;
                 desiredHeight = Noise3D(x, y, z, freq, amp, pers, oct, seed);
 
