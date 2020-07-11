@@ -257,6 +257,8 @@ MonoBehaviour:
   checkerRadius: 10
   powerbar: {fileID: 578125426}
   state: 0
+  currentPower: 0
+  powerSpeed: 0.4
 --- !u!1 &578125424
 GameObject:
   m_ObjectHideFlags: 0
