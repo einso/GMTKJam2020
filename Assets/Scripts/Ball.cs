@@ -33,8 +33,8 @@ public class Ball : MonoBehaviour
     {
         reloadTimer -= Time.deltaTime;
         //print(reloadTimer);
-        
 
+        /*
         if (body.velocity.magnitude < maxVelocity || Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
         {
             flying = true;
@@ -42,6 +42,18 @@ public class Ball : MonoBehaviour
         else
         {
             flying = false;
+        }
+        */
+
+        if (body.velocity.magnitude > maxVelocity)
+        {
+            flying = true;
+        }
+        else
+        {
+            if (Physics.OverlapSphere(body.position, checkerRadius).Length <= 1){
+                
+            }
         }
 
         print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
