@@ -16,7 +16,7 @@ public class ArrowController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         //print(HelperFunctions.Test(Vector3.zero));
         myTransform.forward = HelperFunctions.FlattenY(cam.forward, true);
