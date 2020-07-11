@@ -18,6 +18,8 @@ public class TerrainControls : MonoBehaviour
     public float speed = .5f;
     public float refreshRate = .1f;
     public bool invokeApproach;
+    public float gameTime;
+    public bool terrainPlay;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,18 @@ public class TerrainControls : MonoBehaviour
 
         if (invokeApproach)
             InvokeRepeating("TerrainUpdate", .1f, refreshRate);
+
+        
     }
 
     void Update(){
 
         if (!invokeApproach){
             TerrainUpdate();
+        }
+
+        if (terrainPlay){
+            gameTime += Time.deltaTime;
         }
     }
 
