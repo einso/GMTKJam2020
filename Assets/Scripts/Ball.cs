@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
     {
 
 
-        
+
     }
 
     private void Shot()
@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+
 
             if (state == ShotState.ReadyShot)
             {
@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
                 //lock arrow movement
 
                 state = ShotState.Hit;
-                
+
             }
 
             if (state == ShotState.WaitForShot)
@@ -128,11 +128,17 @@ public class Ball : MonoBehaviour
             Shot();
         }
 
-        if (state == ShotState.ReadyShot){
+        if (state == ShotState.ReadyShot)
+        {
+            powerbar.gameObject.SetActive(true);
             //update ui power bar
-            currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1)/2;
+            currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1) / 2;
             //powerbar.text = "Power " + currentPower;
             powerbar.value = currentPower;
+        }
+        else
+        {
+            powerbar.gameObject.SetActive(false);
         }
 
         //print(Time.timeSinceLevelLoad);
