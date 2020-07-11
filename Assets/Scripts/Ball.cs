@@ -39,6 +39,14 @@ public class Ball : MonoBehaviour
         
     }
 
+    void WaitForShot(){
+
+    }
+
+    void ReadyShot(){
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
