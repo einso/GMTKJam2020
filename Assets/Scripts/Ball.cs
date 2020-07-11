@@ -30,11 +30,13 @@ public class Ball : MonoBehaviour
         {
             body.AddForce(arrow.forward * power);
             reloadTimer = 1;
+            flying = true;
         }
     }
 
     void LockMovement(){
-
+        body.velocity = Vector3.zero;
+        
     }
 
     // Update is called once per frame
