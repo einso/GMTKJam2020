@@ -95,7 +95,7 @@ public class Ball : MonoBehaviour
         if (!flying)
             reloadTimer -= Time.deltaTime;
 
-        print(reloadTimer);
+        //print(reloadTimer);
 
         /*
         if (body.velocity.magnitude < maxVelocity || Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
