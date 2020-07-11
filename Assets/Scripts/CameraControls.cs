@@ -18,6 +18,10 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Mouse lock
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         //follow ball pos
         myTransform.position += target.position - lastPosition;
         lastPosition = target.position;
