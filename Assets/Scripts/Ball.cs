@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
     public float power = 100;
+    public float minPower, maxPower;
+    public float minUpVector, maxUpVector;
     public Transform arrow;
     public float reloadTimer = 1;
     public bool flying;
@@ -12,6 +15,7 @@ public class Ball : MonoBehaviour
     public float checkerRadius = 10;
 
     Rigidbody body;
+    public Text powerbar;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +58,7 @@ public class Ball : MonoBehaviour
 
             if (state == ShotState.Hit)
             {
+                power = Mathf.Lerp(minPower, maxPower, currentPower);
                 body.AddForce(arrow.forward * power);
                 reloadTimer = 1;
                 flying = true;
@@ -123,6 +128,17 @@ public class Ball : MonoBehaviour
             Shot();
         }
 
+        if (state == ShotState.ReadyShot){
+            //update ui power bar
+            currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1)/2;
+            powerbar.text = "Power " + currentPower;
+        }
+
+        //print(Time.timeSinceLevelLoad);
+
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
+
+    public float currentPower;
+    public float powerSpeed = .1f;
 }
