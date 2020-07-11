@@ -33,6 +33,7 @@ public class TerrainControls : MonoBehaviour
         if (randomizeSeed)
         {
             seed = Random.Range(0, 9999999);
+            print(seed);
         }
 
         if (invokeApproach)
