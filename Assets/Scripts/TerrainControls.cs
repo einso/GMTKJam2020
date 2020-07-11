@@ -21,6 +21,7 @@ public class TerrainControls : MonoBehaviour
     public float gameTime;
     public bool terrainPlay;
     Ball ball;
+    public bool randomizeSeed = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,18 @@ public class TerrainControls : MonoBehaviour
         hmWidth = terr.terrainData.heightmapResolution;
         hmHeight = terr.terrainData.heightmapResolution;
 
+        if (randomizeSeed)
+        {
+            seed = Random.Range(0, 9999999);
+        }
+
         if (invokeApproach)
             InvokeRepeating("TerrainUpdate", .1f, refreshRate);
 
         ball = GameObject.FindObjectOfType<Ball>();
+
+
+
     }
 
     void Update()
