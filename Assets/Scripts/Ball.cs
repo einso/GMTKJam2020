@@ -88,6 +88,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //reload timer ausnutzen für roll zeitraum
         reloadTimer -= Time.deltaTime;
         //print(reloadTimer);
 
