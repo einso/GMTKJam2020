@@ -6,6 +6,7 @@ public class ArrowController : MonoBehaviour
 {
     public Transform ball;
     public Transform cam;
+    public float angle;
 
     Transform myTransform;
 
@@ -18,8 +19,13 @@ public class ArrowController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //print(HelperFunctions.Test(Vector3.zero));
+        //flatten vector
         myTransform.forward = HelperFunctions.FlattenY(cam.forward, true);
+
+        //angle rotate
+        myTransform.Rotate(myTransform.right, angle, Space.World);
+
+        //follow ball
         myTransform.position = ball.position;
     }
 }
