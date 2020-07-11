@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     public float checkerRadius = 10;
 
     Rigidbody body;
-    public Text powerbar;
+    public Scrollbar powerbar;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
     {
 
 
-        
+
     }
 
     private void Shot()
@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+
 
             if (state == ShotState.ReadyShot)
             {
@@ -47,13 +47,13 @@ public class Ball : MonoBehaviour
                 //lock arrow movement
 
                 state = ShotState.Hit;
-                
+
             }
 
             if (state == ShotState.WaitForShot)
             {
                 state = ShotState.ReadyShot;
-                print("ready");
+                //print("ready");
             }
 
             if (state == ShotState.Hit)
@@ -88,8 +88,11 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        reloadTimer -= Time.deltaTime;
-        //print(reloadTimer);
+        //reload timer ausnutzen für roll zeitraum
+        if (!flying)
+            reloadTimer -= Time.deltaTime;
+
+        print(reloadTimer);
 
         /*
         if (body.velocity.magnitude < maxVelocity || Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
@@ -118,20 +121,23 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (!flying)
-        {
-            LockMovement();
-        }
-
         if (reloadTimer < 0 && !flying)
         {
+            LockMovement();
             Shot();
         }
 
-        if (state == ShotState.ReadyShot){
+        if (state == ShotState.ReadyShot)
+        {
+            powerbar.gameObject.SetActive(true);
             //update ui power bar
-            currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1)/2;
-            powerbar.text = "Power " + currentPower;
+            currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1) / 2;
+            //powerbar.text = "Power " + currentPower;
+            powerbar.value = currentPower;
+        }
+        else
+        {
+            powerbar.gameObject.SetActive(false);
         }
 
         //print(Time.timeSinceLevelLoad);
