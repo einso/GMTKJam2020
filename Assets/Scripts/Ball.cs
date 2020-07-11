@@ -30,5 +30,6 @@ public class Ball : MonoBehaviour
     void Update()
     {
         reloadTimer -= Time.deltaTime;
+        print(body.velocity + " " + Physics.OverlapSphere(body.position, 10));
     }
 }
