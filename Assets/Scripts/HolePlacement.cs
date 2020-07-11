@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HolePlacement : MonoBehaviour
 {
+
+    public float heightToCastFrom = 100;
+    
     // Start is called before the first frame update
     void Start()
     {
