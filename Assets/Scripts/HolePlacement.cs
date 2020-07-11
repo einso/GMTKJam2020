@@ -19,13 +19,16 @@ public class HolePlacement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player"){
+        if (other.tag == "Player")
+        {
             print("HIT " + Time.time);
+            RandomPosition();
         }
     }
 
-    void RandomPosition(){
-
+    void RandomPosition()
+    {
+        myTransform.position = new Vector3(0, heightToCastFrom, 0);
     }
 
     // Update is called once per frame
