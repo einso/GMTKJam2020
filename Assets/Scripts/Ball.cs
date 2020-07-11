@@ -34,18 +34,19 @@ public class Ball : MonoBehaviour
         }
     }
 
-    void LockMovement(){
+    public enum ShotState
+    {
+        WaitForShot,
+        ReadyShot,
+        Hit
+    }
+
+    void LockMovement()
+    {
         body.velocity = Vector3.zero;
-        
-    }
-
-    void WaitForShot(){
 
     }
 
-    void ReadyShot(){
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -80,7 +81,8 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (!flying){
+        if (!flying)
+        {
             LockMovement();
         }
 
