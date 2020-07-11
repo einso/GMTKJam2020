@@ -248,6 +248,8 @@ MonoBehaviour:
   power: 1500
   minPower: 500
   maxPower: 3000
+  minUpVector: 1
+  maxUpVector: 3
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   flying: 0
