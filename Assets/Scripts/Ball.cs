@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     public float checkerRadius = 10;
 
     Rigidbody body;
-    public Text powerbar;
+    public Scrollbar powerbar;
 
     // Start is called before the first frame update
     void Start()
@@ -131,7 +131,8 @@ public class Ball : MonoBehaviour
         if (state == ShotState.ReadyShot){
             //update ui power bar
             currentPower = (Mathf.Sin(Time.timeSinceLevelLoad * powerSpeed) + 1)/2;
-            powerbar.text = "Power " + currentPower;
+            //powerbar.text = "Power " + currentPower;
+            powerbar.value = currentPower;
         }
 
         //print(Time.timeSinceLevelLoad);
