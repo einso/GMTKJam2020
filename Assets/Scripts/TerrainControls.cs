@@ -40,8 +40,6 @@ public class TerrainControls : MonoBehaviour
 
         ball = GameObject.FindObjectOfType<Ball>();
 
-
-
     }
 
     void Update()
