@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Ball : MonoBehaviour
     public float checkerRadius = 10;
 
     Rigidbody body;
+    public Text powerbar;
 
     // Start is called before the first frame update
     void Start()
