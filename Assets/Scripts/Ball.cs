@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public float power = 100;
+
+    
     // Start is called before the first frame update
     void Start()
     {
