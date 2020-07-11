@@ -249,7 +249,7 @@ MonoBehaviour:
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   flying: 0
-  maxVelocity: 4
+  maxVelocity: 3
   checkerRadius: 10
 --- !u!1 &705507993
 GameObject:
@@ -646,13 +646,13 @@ MonoBehaviour:
   invokeApproach: 0
   gameTime: 0
   terrainPlay: 0
-  randomizeSeed: 0
+  randomizeSeed: 1
   controlPosition: {x: 200, y: 0.5, z: 200}
   freq: 5
   amp: 1
   pers: 1
   oct: 1
-  seed: 0
+  seed: 2
 --- !u!1001 &1780309040
 PrefabInstance:
   m_ObjectHideFlags: 0
