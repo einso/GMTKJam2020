@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 1500
   arrow: {fileID: 2029917369}
+  reloadTimer: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +632,7 @@ MonoBehaviour:
   refreshRate: 0.05
   invokeApproach: 0
   gameTime: 0
-  terrainPlay: 1
+  terrainPlay: 0
   controlPosition: {x: 200, y: 0.5, z: 200}
   freq: 5
   amp: 1

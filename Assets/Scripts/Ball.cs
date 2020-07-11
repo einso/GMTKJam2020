@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     public float power = 100;
     public Transform arrow;
     public float reloadTimer = 1;
+    public bool flying;
 
     Rigidbody body;
 
@@ -29,5 +30,6 @@ public class Ball : MonoBehaviour
     void Update()
     {
         reloadTimer -= Time.deltaTime;
+        print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, 10).Length);
     }
 }
