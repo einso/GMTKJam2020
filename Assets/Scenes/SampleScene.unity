@@ -688,3 +688,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe30f3abdd930248b5b35c10a4c66ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 505306488}
+  cam: {fileID: 963194228}
