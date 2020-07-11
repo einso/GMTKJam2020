@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraControls : MonoBehaviour
 {
@@ -28,5 +29,12 @@ public class CameraControls : MonoBehaviour
 
         //rotate around ball
         myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
+
+
+        //reset level
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
