@@ -133,6 +133,8 @@ public class Ball : MonoBehaviour
             powerbar.text = "Power " + currentPower;
         }
 
+        print(Time.timeSinceLevelLoad);
+
         //print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
 
