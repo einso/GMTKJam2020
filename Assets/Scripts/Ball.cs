@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0)
+        if (Input.GetKeyDown(KeyCode.Space) && reloadTimer < 0 && !flying)
         {
             body.AddForce(arrow.forward * power);
             reloadTimer = 1;
@@ -33,6 +33,17 @@ public class Ball : MonoBehaviour
     {
         reloadTimer -= Time.deltaTime;
         //print(reloadTimer);
-        print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length);
+        
+
+        if (body.velocity.magnitude < maxVelocity || Physics.OverlapSphere(body.position, checkerRadius).Length <= 1)
+        {
+            flying = true;
+        }
+        else
+        {
+            flying = false;
+        }
+
+        print(body.velocity.magnitude + " " + Physics.OverlapSphere(body.position, checkerRadius).Length + " " + flying);
     }
 }
