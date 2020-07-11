@@ -41,6 +41,8 @@ public class Ball : MonoBehaviour
         Hit
     }
 
+    public ShotState state;
+
     void LockMovement()
     {
         body.velocity = Vector3.zero;
