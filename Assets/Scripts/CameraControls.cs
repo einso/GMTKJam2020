@@ -7,12 +7,15 @@ public class CameraControls : MonoBehaviour
 {
     public Transform target;
 
-    Transform myTransform;
+    public Transform myTransform;
+    Transform realTransform;
     Vector3 lastPosition;
     // Start is called before the first frame update
     void Start()
     {
-        myTransform = transform;
+        //myTransform = transform;
+        realTransform = transform;
+
         lastPosition = target.position;
 
         Scene[] scenes = SceneManager.GetAllScenes();
