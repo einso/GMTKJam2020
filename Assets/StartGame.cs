@@ -11,7 +11,7 @@ public class StartGame : MonoBehaviour
 
     }
 
-    void StartGamePlease()
+    public void StartGamePlease()
     {
         SceneManager.LoadScene(1);
     }
