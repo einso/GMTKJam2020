@@ -24,7 +24,7 @@ public class HolePlacement : MonoBehaviour
         {
             print("HIT " + Time.time);
 
-            Instantiate(vfxKonfetti, myTransform.position, Quaternion.identity);
+            Instantiate(vfxKonfetti, myTransform.position, Quaternion.Euler(-90, 0, 0));
 
             RandomPosition();
         }
@@ -51,7 +51,8 @@ public class HolePlacement : MonoBehaviour
         }
 
         //cheat code
-        if (Input.GetKeyDown(KeyCode.N)){
+        if (Input.GetKeyDown(KeyCode.N))
+        {
             RandomPosition();
         }
     }
