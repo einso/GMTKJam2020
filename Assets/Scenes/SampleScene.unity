@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crate
       objectReference: {fileID: 0}
+    - target: {fileID: 4796632696629857301, guid: 8513fa804a9221b42a70e3ec09a3ae8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8415620075003018758, guid: 8513fa804a9221b42a70e3ec09a3ae8f,
         type: 3}
       propertyPath: m_LocalPosition.x
