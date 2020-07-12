@@ -17,6 +17,11 @@ public class CameraControls : MonoBehaviour
 
         Scene[] scenes = SceneManager.GetAllScenes();
         print("scenes " + scenes.Length);
+
+        if (scenes.Length <= 1)
+        {
+            SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        }
     }
 
     // Update is called once per frame
@@ -41,11 +46,13 @@ public class CameraControls : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)){
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
             SceneManager.LoadScene(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2)){
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
             SceneManager.LoadScene(1);
         }
     }
