@@ -9,7 +9,7 @@ public class GameMaster : MonoBehaviour
     public bool terrainParams = true;
     public float terrainSpeed, terrainFrequency, terrainAmplitude, terrainPersistance, terrainOctaves;
     public bool ballParams = true;
-    public float minBallPower, maxBallPower, minUpVector;
+    public float minBallPower, maxBallPower, minUpVector, maxUpVector, reloadHitTimer, maxIdleVelocity, powerBarSpeed;
     // Start is called before the first frame update
     void Start()
     {
