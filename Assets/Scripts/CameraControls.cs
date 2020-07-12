@@ -21,6 +21,7 @@ public class CameraControls : MonoBehaviour
         if (scenes.Length <= 1)
         {
             SceneManager.LoadScene(1, LoadSceneMode.Additive);
+            SceneManager.LoadScene(2, LoadSceneMode.Additive);
         }
     }
 
