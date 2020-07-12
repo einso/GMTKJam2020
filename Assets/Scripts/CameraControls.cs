@@ -37,5 +37,13 @@ public class CameraControls : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
+            SceneManager.LoadScene(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2)){
+            SceneManager.LoadScene(1);
+        }
     }
 }
