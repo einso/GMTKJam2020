@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adamcopy 1.unity
     guid: ae100c245a6e30b46923dfefb22005fe
+  - enabled: 1
+    path: Assets/Scenes/GameDesign.unity
+    guid: 561cf72ef9956bb4190fa7f3a5072512
   m_configObjects: {}
