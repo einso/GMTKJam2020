@@ -6381,8 +6381,8 @@ MonoBehaviour:
   max: 350
   vfxKonfetti: {fileID: 1973899471185633976, guid: b4dd2363f83cf5b4c9df5ac0288f39e6,
     type: 3}
-  minScale: 0
-  maxScale: 0
+  minScale: 1
+  maxScale: 4
 --- !u!135 &1452300292
 SphereCollider:
   m_ObjectHideFlags: 0
