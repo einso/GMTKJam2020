@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flagParams: 1
-  minFlagPosition: 50
-  maxFlagPosition: 350
+  minFlagPosition: 100
+  maxFlagPosition: 110
   terrainParams: 1
   terrainSpeed: 0.05
   terrainFrequency: 5
@@ -176,8 +176,8 @@ MonoBehaviour:
   ballParams: 1
   minBallPower: 500
   maxBallPower: 3000
-  minUpVector: 1
-  maxUpVector: 3
+  minAngle: 0
+  maxAngle: 0
   reloadHitTimer: 1
   maxIdleVelocity: 4
   powerBarSpeed: 4
