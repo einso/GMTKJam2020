@@ -166,8 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlagPosition: 50
   maxFlagPosition: 350
-  terrainSpeed: 0
-  terrainFrequency: 0
-  terrainAmplitude: 0
-  terrainPersistance: 0
-  terrainOctaves: 0
+  terrainSpeed: 0.05
+  terrainFrequency: 5
+  terrainAmplitude: 1
+  terrainPersistance: 1
+  terrainOctaves: 1
