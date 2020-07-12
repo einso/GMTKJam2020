@@ -45,11 +45,13 @@ public class CameraControls : MonoBehaviour
 
         if (Physics.Raycast(target.position, myTransform.position - target.position, out hito, Vector3.Distance(myTransform.transform.position, target.position)))
         {
-            
+            realTransform.rotation = myTransform.rotation;
+            realTransform.position = hito.point + realTransform.forward * .1f;
         }
         else
         {
-
+            realTransform.position = myTransform.position;
+            realTransform.rotation = myTransform.rotation;
         }
 
 
