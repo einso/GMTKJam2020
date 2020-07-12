@@ -14,6 +14,9 @@ public class CameraControls : MonoBehaviour
     {
         myTransform = transform;
         lastPosition = target.position;
+
+        Scene[] scenes = SceneManager.GetAllScenes();
+        print("scenes " + scenes.Length);
     }
 
     // Update is called once per frame
