@@ -10,6 +10,7 @@ public class HolePlacement : MonoBehaviour
     Transform myTransform;
     public Transform goalpost;
     public float min, max;
+    public GameObject vfxKonfetti;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,9 @@ public class HolePlacement : MonoBehaviour
         if (other.tag == "Player")
         {
             print("HIT " + Time.time);
+
+            Instantiate(vfxKonfetti, myTransform.position, Quaternion.identity);
+
             RandomPosition();
         }
     }
