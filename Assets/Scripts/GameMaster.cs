@@ -27,10 +27,13 @@ public class GameMaster : MonoBehaviour
             hole.max = maxFlagPosition;
         }
 
-        if (terrainParams){
+        if (terrainParams)
+        {
             terrain.amp = terrainAmplitude;
             terrain.freq = terrainFrequency;
-            terrain.oct = (int) terrainOctaves;
+            terrain.oct = (int)terrainOctaves;
+            terrain.pers = terrainPersistance;
+            terrain.speed = terrainSpeed;
         }
     }
 
