@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
+    public float minFlagPosition, maxFlagPosition;
     // Start is called before the first frame update
     void Start()
     {
