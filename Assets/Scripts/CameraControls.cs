@@ -32,13 +32,8 @@ public class CameraControls : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        //follow ball pos
-        myTransform.position += target.position - lastPosition;
-        lastPosition = target.position;
 
-        //rotate around ball
-        myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
-        myTransform.RotateAround(target.position, myTransform.right, -Input.GetAxis("Mouse Y"));
+        FollowBall();
 
 
         //reset level
@@ -56,5 +51,16 @@ public class CameraControls : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+    }
+
+    public void FollowBall()
+    {
+        //follow ball pos
+        myTransform.position += target.position - lastPosition;
+        lastPosition = target.position;
+
+        //rotate around ball
+        myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
+        myTransform.RotateAround(target.position, myTransform.right, -Input.GetAxis("Mouse Y"));
     }
 }
