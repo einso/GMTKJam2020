@@ -317,8 +317,6 @@ MonoBehaviour:
   power: 1500
   minPower: 500
   maxPower: 3000
-  minUpVector: 1
-  maxUpVector: 3
   arrow: {fileID: 2029917369}
   reloadTimer: 1
   reloadTimerFull: 1
@@ -5585,7 +5583,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9ad247c8e22b5364fb62c6d4876655af,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ad247c8e22b5364fb62c6d4876655af,
         type: 3}
@@ -5782,7 +5780,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6cdcb288b046ab243a2bc6efde9da8e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6cdcb288b046ab243a2bc6efde9da8e1,
         type: 3}
@@ -6202,7 +6200,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ce8aaed9a773a46469ae8bcab7231feb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ce8aaed9a773a46469ae8bcab7231feb,
         type: 3}
@@ -6263,6 +6261,8 @@ MonoBehaviour:
   ball: {fileID: 505306488}
   cam: {fileID: 963194228}
   angle: -45
+  minAngle: 0
+  maxAngle: 0
   autoRotate: 0
   speed: 100
 --- !u!4 &2029917369 stripped
