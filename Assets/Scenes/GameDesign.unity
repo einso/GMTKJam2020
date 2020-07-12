@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flagParams: 1
   minFlagPosition: 100
-  maxFlagPosition: 110
+  maxFlagPosition: 300
   terrainParams: 1
   terrainSpeed: 0.05
   terrainFrequency: 5
