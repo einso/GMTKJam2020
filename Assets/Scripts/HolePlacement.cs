@@ -11,6 +11,7 @@ public class HolePlacement : MonoBehaviour
     public Transform goalpost;
     public float min, max;
     public GameObject vfxKonfetti;
+    public float minScale, maxScale;
 
     // Start is called before the first frame update
     void Start()
