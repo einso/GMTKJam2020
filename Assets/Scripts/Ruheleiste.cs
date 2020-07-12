@@ -21,7 +21,7 @@ public class Ruheleiste : MonoBehaviour
     {
         Vector3 scale = rect.localScale;
 
-        scale.x = Mathf.Lerp(0, startScale, ball.reloadTimer / ball.reloadTimerFull);
+        scale.x = Mathf.Lerp(0, startScale, 1-(ball.reloadTimer / ball.reloadTimerFull));
 
         rect.localScale = scale;
     }
