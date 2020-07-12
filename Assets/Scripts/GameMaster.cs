@@ -21,7 +21,8 @@ public class GameMaster : MonoBehaviour
         terrain = GameObject.FindObjectOfType<TerrainControls>();
         ball = GameObject.FindObjectOfType<Ball>();
 
-        if (flagParams){
+        if (flagParams)
+        {
             hole.min = minFlagPosition;
             hole.max = maxFlagPosition;
         }
@@ -30,6 +31,6 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
