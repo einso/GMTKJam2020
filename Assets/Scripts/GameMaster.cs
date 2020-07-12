@@ -14,12 +14,14 @@ public class GameMaster : MonoBehaviour
     HolePlacement hole;
     TerrainControls terrain;
     Ball ball;
+    ArrowController arrow;
     // Start is called before the first frame update
     void Start()
     {
         hole = GameObject.FindObjectOfType<HolePlacement>();
         terrain = GameObject.FindObjectOfType<TerrainControls>();
         ball = GameObject.FindObjectOfType<Ball>();
+        arrow = GameObject.FindObjectOfType<ArrowController>();
 
         if (flagParams)
         {
@@ -34,6 +36,17 @@ public class GameMaster : MonoBehaviour
             terrain.oct = (int)terrainOctaves;
             terrain.pers = terrainPersistance;
             terrain.speed = terrainSpeed;
+        }
+
+        if (ballParams)
+        {
+            ball.minPower = minBallPower;
+            ball.maxPower = maxBallPower;
+            arrow.minAngle = minAngle;
+            arrow.maxAngle = maxAngle;
+            ball.reloadTimerFull = reloadHitTimer;
+            ball.maxVelocity = maxIdleVelocity;
+            ball.powerSpeed = powerBarSpeed;
         }
     }
 
