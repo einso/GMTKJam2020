@@ -23,8 +23,9 @@ public class CameraControls : MonoBehaviour
 
         if (scenes.Length <= 1)
         {
-            SceneManager.LoadScene(1, LoadSceneMode.Additive);
-            SceneManager.LoadScene(2, LoadSceneMode.Additive);
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentIndex + 1, LoadSceneMode.Additive);
+            SceneManager.LoadScene(currentIndex + 2, LoadSceneMode.Additive);
         }
     }
 
