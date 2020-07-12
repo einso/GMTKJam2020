@@ -38,6 +38,9 @@ public class HolePlacement : MonoBehaviour
         float x = Random.Range(min, max);
         float z = Random.Range(min, max);
         myTransform.position = new Vector3(x, heightToCastFrom, z);
+
+        //random hole scale
+        myTransform.localScale = startScale * Random.Range(minScale, maxScale);
     }
 
     // Update is called once per frame
