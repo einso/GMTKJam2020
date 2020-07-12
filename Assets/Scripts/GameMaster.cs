@@ -26,6 +26,12 @@ public class GameMaster : MonoBehaviour
             hole.min = minFlagPosition;
             hole.max = maxFlagPosition;
         }
+
+        if (terrainParams){
+            terrain.amp = terrainAmplitude;
+            terrain.freq = terrainFrequency;
+            terrain.oct = (int) terrainOctaves;
+        }
     }
 
     // Update is called once per frame
