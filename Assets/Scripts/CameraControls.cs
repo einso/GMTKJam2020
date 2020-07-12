@@ -7,12 +7,15 @@ public class CameraControls : MonoBehaviour
 {
     public Transform target;
 
-    Transform myTransform;
+    public Transform myTransform;
+    Transform realTransform;
     Vector3 lastPosition;
     // Start is called before the first frame update
     void Start()
     {
-        myTransform = transform;
+        //myTransform = transform;
+        realTransform = transform;
+
         lastPosition = target.position;
 
         Scene[] scenes = SceneManager.GetAllScenes();
@@ -32,13 +35,10 @@ public class CameraControls : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        //follow ball pos
-        myTransform.position += target.position - lastPosition;
-        lastPosition = target.position;
 
-        //rotate around ball
-        myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
-        myTransform.RotateAround(target.position, myTransform.right, -Input.GetAxis("Mouse Y"));
+        FollowBall();
+        realTransform.position = myTransform.position;
+        realTransform.rotation = myTransform.rotation;
 
 
         //reset level
@@ -47,14 +47,16 @@ public class CameraControls : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SceneManager.LoadScene(0);
-        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SceneManager.LoadScene(1);
-        }
+    public void FollowBall()
+    {
+        //follow ball pos
+        myTransform.position += target.position - lastPosition;
+        lastPosition = target.position;
+
+        //rotate around ball
+        myTransform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X"));
+        myTransform.RotateAround(target.position, myTransform.right, -Input.GetAxis("Mouse Y"));
     }
 }
