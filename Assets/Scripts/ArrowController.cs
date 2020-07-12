@@ -7,6 +7,7 @@ public class ArrowController : MonoBehaviour
     public Transform ball;
     public Transform cam;
     public float angle;
+    public float minAngle, maxAngle;
 
     Transform myTransform;
 
