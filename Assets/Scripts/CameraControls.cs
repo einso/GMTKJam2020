@@ -41,6 +41,16 @@ public class CameraControls : MonoBehaviour
         realTransform.rotation = myTransform.rotation;
 
         //clipping
+        RaycastHit hito;
+
+        if (Physics.Raycast(target.position, myTransform.position - target.position, out hito, Vector3.Distance(myTransform.transform.position, target.position)))
+        {
+
+        }
+        else
+        {
+
+        }
 
 
         //reset level
