@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    [Header("Flag")]
+    public bool flagParams = true;
     public float minFlagPosition, maxFlagPosition;
-    [Header("Terrain")]
+    public bool terrainParams = true;
     public float terrainSpeed, terrainFrequency, terrainAmplitude, terrainPersistance, terrainOctaves;
-    [Header("Ball")]
-    public float minBallPower, maxBallPower, minUpVector;
+    public bool ballParams = true;
+    public float minBallPower, maxBallPower, minAngle, maxAngle, reloadHitTimer, maxIdleVelocity, powerBarSpeed;
+
+    HolePlacement hole;
+    TerrainControls terrain;
+    Ball ball;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hole = GameObject.FindObjectOfType<HolePlacement>();
+        terrain = GameObject.FindObjectOfType<TerrainControls>();
+        ball = GameObject.FindObjectOfType<Ball>();
+
+        if (flagParams){
+            hole.min = minFlagPosition;
+            hole.max = maxFlagPosition;
+        }
     }
 
     // Update is called once per frame

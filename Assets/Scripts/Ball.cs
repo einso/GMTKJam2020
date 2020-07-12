@@ -7,7 +7,6 @@ public class Ball : MonoBehaviour
 {
     public float power = 100;
     public float minPower, maxPower;
-    public float minUpVector, maxUpVector;
     public Transform arrow;
     public float reloadTimer = 1;
     public float reloadTimerFull = 2;
