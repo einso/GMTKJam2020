@@ -40,6 +40,8 @@ public class CameraControls : MonoBehaviour
         realTransform.position = myTransform.position;
         realTransform.rotation = myTransform.rotation;
 
+        //clipping
+
 
         //reset level
         if (Input.GetKeyDown(KeyCode.R))
