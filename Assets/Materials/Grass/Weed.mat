@@ -34,4 +34,4 @@ Material:
     - _WindSpeed: 0.007
     - _WindStrength: 1
     m_Colors:
-    - _Color: {r: 0.93333334, g: 0.57094365, b: 0.2078431, a: 1}
+    - _Color: {r: 0.8773585, g: 0.34432182, b: 0.21106264, a: 1}
