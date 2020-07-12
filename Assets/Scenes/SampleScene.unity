@@ -1252,7 +1252,8 @@ MonoBehaviour:
   goalpost: {fileID: 1745168335}
   min: 50
   max: 350
-  vfxKonfetti: {fileID: 1536769061}
+  vfxKonfetti: {fileID: 1973899471185633976, guid: b4dd2363f83cf5b4c9df5ac0288f39e6,
+    type: 3}
 --- !u!135 &1452300292
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1266,12 +1267,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1536769061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1973899471185633976, guid: b4dd2363f83cf5b4c9df5ac0288f39e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1973899470504517277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1685136669
 GameObject:
   m_ObjectHideFlags: 0
