@@ -10,10 +10,16 @@ public class GameMaster : MonoBehaviour
     public float terrainSpeed, terrainFrequency, terrainAmplitude, terrainPersistance, terrainOctaves;
     public bool ballParams = true;
     public float minBallPower, maxBallPower, minAngle, maxAngle, reloadHitTimer, maxIdleVelocity, powerBarSpeed;
+
+    HolePlacement hole;
+    TerrainControls terrain;
+    Ball ball;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hole = GameObject.FindObjectOfType<HolePlacement>();
+        terrain = GameObject.FindObjectOfType<TerrainControls>();
+        ball = GameObject.FindObjectOfType<Ball>();
     }
 
     // Update is called once per frame
