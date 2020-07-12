@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    [Header("Flag")]
+    public bool flagParams = true;
     public float minFlagPosition, maxFlagPosition;
-    [Header("Terrain")]
+    public bool terrainParams = true;
     public float terrainSpeed, terrainFrequency, terrainAmplitude, terrainPersistance, terrainOctaves;
-    [Header("Ball")]
+    public bool ballParams = true;
     public float minBallPower, maxBallPower, minUpVector;
     // Start is called before the first frame update
     void Start()
