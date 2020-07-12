@@ -12,11 +12,13 @@ public class HolePlacement : MonoBehaviour
     public float min, max;
     public GameObject vfxKonfetti;
     public float minScale, maxScale;
+    Vector3 startScale;
 
     // Start is called before the first frame update
     void Start()
     {
         myTransform = transform;
+        startScale = myTransform.localScale;
     }
 
     void OnTriggerEnter(Collider other)
