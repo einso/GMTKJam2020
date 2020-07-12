@@ -37,6 +37,8 @@ public class CameraControls : MonoBehaviour
 
 
         FollowBall();
+        realTransform.position = myTransform.position;
+        realTransform.rotation = myTransform.rotation;
 
 
         //reset level
